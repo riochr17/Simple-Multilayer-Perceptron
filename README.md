@@ -71,6 +71,7 @@ mlp.saveModel("model/xor2531")
 - MLP tidak melakukan normalisasi pada data masukan, sehingga data input (latih atau uji) yang diberikan harus di normalisasi terlebih dahulu (jika dibutuhkan).
 - Backpropagation menggunakan basic SGD (Stochastic Gradient Descent) dengan variasi momentum saja.
 - Kumulasi error dihitung dengan melakukan full testing setelah satu epoch selesai, dapat dioptimasi dengan menghitung error saat backpropagation.
+- Model yang disimpan hanya berupa weight dan bias saja tidak menyimpan konfigurasi layer mlp, sehingga ketika memuat model harus inisialisasi layer terlebih dahulu.
 
 ## Credits
 
