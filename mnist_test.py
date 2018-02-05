@@ -2,7 +2,7 @@ from mlpmat import MLP
 from image import ImageReader
 import numpy as np
 
-# mlp layer: 2 nodes (input) -> 3 nodes (hidden) -> 1 nodes (output)
+# mlp layer: 784 nodes (input) -> 15 nodes (hidden) -> 10 nodes (output)
 mlp = MLP([784, 15, 10], learning_rate = 0.001, momentum = 0.05, mini_batch = 100, print_error_progress = True)
 
 def simpulkan(arr):
