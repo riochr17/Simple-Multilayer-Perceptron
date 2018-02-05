@@ -4,7 +4,7 @@ from mlpmat import MLP
 mlp = MLP([2, 5, 3, 1], learning_rate = 0.15)
 
 # load saved model
-mlp.loadModel("xor2531")
+mlp.loadModel("model/xor2531")
 
 # predict using model
 print mlp.predict([1, 1])

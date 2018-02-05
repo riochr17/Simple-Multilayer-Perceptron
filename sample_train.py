@@ -19,4 +19,4 @@ print mlp.predict([0, 1])
 print mlp.predict([0, 0])
 
 # save model
-mlp.saveModel("xor2531")
+mlp.saveModel("model/xor2531")
