@@ -1,7 +1,7 @@
 from mlpmat import MLP
 
 # init MLP instance
-mlp = MLP([2, 5, 3, 1], learning_rate = 0.15)
+mlp = MLP([2, 5, 3, 1], learning_rate = 0.15, print_error_progress = True)
 
 # feed training data
 mlp.TrainData.append([[1, 1], [0]])
@@ -19,4 +19,4 @@ print mlp.predict([0, 1])
 print mlp.predict([0, 0])
 
 # save model
-mlp.saveModel("model/xor2531")
+mlp.saveModel("model/xormodel")

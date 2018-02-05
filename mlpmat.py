@@ -26,7 +26,7 @@ class MLP:
 	normalized  = False 
 	modelLoadedDoesntMatchLayer = False
 
-	def __init__(self, layers, learning_rate = 0.5, momentum = 0, mini_batch = 1, print_batch_progress = False, full_testing_periode = 0, print_testing_detail = False, print_error_progress = False):
+	def __init__(self, layers, learning_rate = 0.5, momentum = 0, mini_batch = 1, print_batch_progress = False, full_testing_periode = 1, print_testing_detail = False, print_error_progress = False):
 		for layerN in layers:
 			self.NLayerCount.append(layerN)
 
