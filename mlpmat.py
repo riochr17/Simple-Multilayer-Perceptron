@@ -146,7 +146,8 @@ class MLP:
 	def backpropagation(self, expectation):
 		deltaRight = (self.matNeuronL[len(self.matNeuronL) - 1] - expectation) * self.sigmoid(self.matNeuronL[len(self.matNeuronL) - 1], True)
 		for p in reversed(range(len(self.matNeuronL) - 1)):
-			self.matWeightE[p] = self.LearningRte * np.dot(deltaRight.T, self.matNeuronL[p]).T + self.Momentum * self.matWeightE[p]
+			last_w = self.Momentum * self.matWeightE[p]
+			self.matWeightE[p] = self.LearningRte * (np.dot(deltaRight.T, self.matNeuronL[p]).T + last_w) + last_w
 			self.matWBiasE[p + 1] = self.LearningRte * deltaRight
 			temp = np.dot(self.matWeight[p], deltaRight.T)
 			deltaRight = temp.T * self.sigmoid(self.matNeuronL[p], True)

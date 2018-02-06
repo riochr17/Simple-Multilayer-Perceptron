@@ -2,6 +2,8 @@
 
 A Python implementation of multilayer perceptron neural network
 
+Note: formulasi perhitungan multilayer perceptron dapat dilihat [disini](mlp-formula)
+
 ## Installation
 
 Make sure that you have numpy library installed
